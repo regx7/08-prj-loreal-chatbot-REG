@@ -1,3 +1,12 @@
+:root {
+  /* L'Oréal Brand Colors */
+  --loreal-black: #000000;
+  --loreal-white: #FFFFFF;
+  --loreal-gold: #e3a535; /* A nice, elegant gold accent */
+
+  /* Brand Font */
+  --brand-font: 'Montserrat', sans-serif;
+}
 /* —— basic reset —— */
 * {
   box-sizing: border-box;
@@ -7,8 +16,9 @@
 
 /* —— body + fonts —— */
 body {
-  font-family: "Montserrat", Arial, Helvetica, sans-serif;
-  color: #333;
+  font-family: var(--brand-font);
+  color: var(--loreal-black);
+  background: var(--loreal-white);
   display: flex;
   justify-content: center;
 }
@@ -20,14 +30,22 @@ body {
 
 /* header */
 .site-header {
-  text-align: center;
-  padding-top: 50px;
+  display: flex;
+  align-items: center;
+  background-color: var(--loreal-white);
+  color: var(--loreal-black);
+  padding: 10px 20px;
 }
 
 .site-title {
   font-size: 22px;
   font-weight: 500;
   margin-bottom: 10px;
+}
+
+.logo{
+  height: 40px;
+  margin-right: 15px;
 }
 
 /* chat window */
@@ -81,8 +99,8 @@ body {
 
 .chat-form button {
   font-size: 18px;
-  background: #000;
-  color: #fff;
+  background: var(--loreal-gold);
+  color: var(--loreal-black);
   border: none;
   padding: 12px;
   width: 48px;
@@ -99,7 +117,7 @@ body {
 }
 
 .chat-form button:hover {
-  background: #666666;
+  background: #c9922e;
 }
 
 .chat-form button:focus {
